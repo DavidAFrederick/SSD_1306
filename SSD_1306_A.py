@@ -45,6 +45,10 @@ font = ImageFont.load_default()
 
 text = "CMD 10"
 draw.text((0,0), text, font=font,fill=255,)
+text = "CMD 20"
+draw.text((10,0), text, font=font,fill=255,)
+
+
 
 #(font_width, font_height) = font.getsize(text)
 # font_width=5
