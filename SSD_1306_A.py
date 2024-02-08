@@ -19,24 +19,25 @@ oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C)  # Removed re
 oled.fill(0)
 oled.show()
 
+
+# Documentation:  https://pillow.readthedocs.io/en/stable/reference/ImageDraw.html
 # Create blank image for drawing.
 # Make sure to create image with mode '1' for 1-bit color.
 image = Image.new("1", (oled.width, oled.height))
 
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
-# font = ImageFont.load_default(30)  # Number is the font size
-
-# Documentation:  https://pillow.readthedocs.io/en/stable/reference/ImageDraw.html
+font = ImageFont.load_default(30)  # Number is the font size
 
 text = "CMD 10"
-# draw.text((0,0), text, font=font,fill=1,)  # First parameter is position of text, 
-#                                            # Second paramter is the text to be displayed
-#                                            # Third is Font to be used
-#                                            # Forth is the color:   0 is black, 1 is blue
+position = (0,0)
+draw.text(position, text, font=font,fill=1)  # First parameter is position of text, 
+                                           # Second paramter is the text to be displayed
+                                           # Third is Font to be used
+                                           # Forth is the color:   0 is black, 1 is blue
 
 
-draw.text((0,0), "TEST", font=ImageFont.load_default(30), fill=1)  
+# draw.text((0,0), "TEST", font=ImageFont.load_default(30), fill=1)  
                                            # First parameter is position of text, 
                                            # Second paramter is the text to be displayed
                                            # Third is Font to be used
