@@ -29,7 +29,7 @@ image = Image.new("1", (oled.width, oled.height))
 draw = ImageDraw.Draw(image)
 font = ImageFont.load_default(30)  # Number is the font size
 
-text = "CMD 10"
+text = "CMD 33 Test 123456789"
 position = (0,0)
 draw.text(position, text, font=font,fill=1)  # First parameter is position of text, 
                                            # Second paramter is the text to be displayed
