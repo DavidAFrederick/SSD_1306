@@ -38,27 +38,15 @@ draw = ImageDraw.Draw(image)
 # )
 
 # Load default font.
-font = ImageFont.load_default()
+font = ImageFont.load_default(30)  # Number is the font size
 
-# Draw Some Text
 # Documentation:  https://pillow.readthedocs.io/en/stable/reference/ImageDraw.html
 
 text = "CMD 10"
-draw.text((0,0), text, font=font,fill=255,)
-text = "CMD 20"
-draw.text((10,0), text, font=font,fill=255,)
-
-
-
-#(font_width, font_height) = font.getsize(text)
-# font_width=5
-# font_height = 8
-# draw.text(
-#     (oled.width // 2 - font_width // 2, oled.height // 2 - font_height // 2),
-#     text,
-#     font=font,
-#     fill=255,
-# )
+draw.text((0,0), text, font=font,fill=1,)  # First parameter is position of text, 
+                                           # Second paramter is the text to be displayed
+                                           # Third is Font to be used
+                                           # Forth is the color:   0 is black, 1 is blue
 
 # Display image
 oled.image(image)
