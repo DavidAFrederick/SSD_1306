@@ -1,7 +1,6 @@
 # Feb 8, 2024
 
 import board
-import digitalio
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_ssd1306
 
